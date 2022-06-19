@@ -7,29 +7,20 @@ class Node {
 
 class LinkedList {
 	constructor(value) {
-		this.head = {
-			value: value,
-			next: null,
-		};
+		this.head = new Node(value);
 		this.tail = this.head;
 		this.length = 1;
 	}
 
 	append(value) {
-		var newNode = {
-			value: value,
-			next: null,
-		};
+		var newNode = new Node(value);
 		this.tail.next = newNode;
 		this.tail = newNode;
 		this.length++;
 	}
 
 	prepend(value) {
-		var newNode = {
-			value: value,
-			next: null,
-		};
+		var newNode = new Node(value);
 		newNode.next = this.head;
 		this.head = newNode;
 		this.length++;
@@ -60,10 +51,7 @@ class LinkedList {
 
 		if (index < this.length) {
 			let current = this.head;
-			let newNode = {
-				value: value,
-				next: null,
-			};
+			let newNode = new Node(value);
 
 			for (let i = 0; i != index - 1; i++) {
 				current = current.next;
