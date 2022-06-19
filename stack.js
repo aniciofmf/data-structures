@@ -34,7 +34,9 @@ class Stack {
 	pop() {
 		var value = null;
 
-		if (this.length == 1) {
+		if (this.length == 0) {
+			return null;
+		} else if (this.length == 1) {
 			value = this.top.value;
 			this.top = null;
 			this.bottom = null;
@@ -42,6 +44,8 @@ class Stack {
 			value = this.top.value;
 			this.top = this.top.next;
 		}
+
+		this.length--;
 
 		return value;
 	}
