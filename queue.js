@@ -14,9 +14,12 @@ class Queue {
 		this.length = 0;
 	}
 
-	// front peek
-	peek() {
+	frontPeek() {
 		return this.length > 0 ? this.head.value : null;
+	}
+
+	backPeek() {
+		return this.length > 0 ? this.tail.value : null;
 	}
 
 	enqueue(value) {
