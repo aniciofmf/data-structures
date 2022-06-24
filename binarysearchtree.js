@@ -18,6 +18,10 @@ class BinarySearchTree {
 		return tree;
 	}
 
+	isLeaf(node) {
+		return node.left === null && node.right === null;
+	}
+
 	insert(value) {
 		var node = new Node(value);
 		var tmpNode = null;
@@ -73,6 +77,8 @@ class BinarySearchTree {
 
 		return found;
 	}
+
+	remove(value) {}
 }
 
 const tree = new BinarySearchTree();
