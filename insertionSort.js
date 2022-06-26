@@ -1,7 +1,9 @@
 const numbers = [9, 40, 10, 2, 1, 5, 69, 87, 283, 0, 600, 544, 704, 8, 4];
 
 function insertionSort(array) {
-	for (let i = 1; i < array.length; i++) {
+	const { length } = array;
+
+	for (let i = 1; i < length; i++) {
 		let pos = i - 1;
 
 		if (array[i] < array[pos]) {
